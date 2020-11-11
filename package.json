@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "beautiful":"lint-staged",
+    "format": "prettier  --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,scss}",
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "sasstocss": "sass src/resources/sass/app.scss src/public/css/app.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +14,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test" 
+      "pre-commit": "npm test"
     }
   },
   "author": "",
@@ -21,7 +22,8 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0"
+    "express-handlebars": "^5.2.0",
+    "mongoose": "^5.10.13"
   },
   "devDependencies": {
     "husky": "^4.3.0",
@@ -33,11 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duycarry123/express-av.git"
+    "url": "git+https://github.com/duycarry123/expblog.git"
   },
   "bugs": {
-    "url": "https://github.com/duycarry123/express-av/issues"
+    "url": "https://github.com/duycarry123/expblog/issues"
   },
-  "homepage": "https://github.com/duycarry123/express-av#readme",
   "description": ""
 }

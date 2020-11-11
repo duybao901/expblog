@@ -6,6 +6,8 @@ const path = require('path'); // Của node js
 const port = 3000;
 
 const route = require('./routes/index');
+const db = require('./config/mongo/index');
+db.connect();
 
 //TODO Use
 // app.use(morgan('combined'))

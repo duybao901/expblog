@@ -46,6 +46,10 @@ không hiển thị lên URL
         - index.js
         - app
             + controllers
+            + model
+        - config
+            + mongo
+                + index
         - public
             + css
             + img
