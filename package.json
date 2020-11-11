@@ -1,0 +1,35 @@
+{
+  "name": "f8_blog",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful":"prettier  --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,scss}",
+    "start": "nodemon --inspect src/index.js",
+    "sasstocss": "sass src/resources/sass/app.scss src/public/css/app.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "sass": "^1.29.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duycarry123/express-av.git"
+  },
+  "bugs": {
+    "url": "https://github.com/duycarry123/express-av/issues"
+  },
+  "homepage": "https://github.com/duycarry123/express-av#readme",
+  "description": ""
+}

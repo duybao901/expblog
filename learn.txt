@@ -1,0 +1,68 @@
+                                    🐊🚀 🐊🚀 🐊🚀 🐊🚀
+                                            Express
+1. HTTP 🚀
+    - HTTP là viết tắt của từ HyperText Transfer Protocol 
+    - Là giao thức truyền tải siêu vắn bản
+    - Là 1 trong 5 chuẩn giao tiếp của mạng internet, được dùng để liên hệ thông tin giữa
+máy chủ (Web server) và Máy chủ dịch vụ (Web client) 
+
+2. SSR & CSR 🚀
+    - SSR là viết tắt của từ Server Side Rendering: render phía server *Tốt cho SEO
+    - CSR là viết tắt của từ Client Side Rendering: render phía client *SPA, Tăng trải nghiệm 
+người dùng
+
+3. ExpressJs 🚀
+    - Express js là một Framework nhỏ, nhưng linh hoạt được xây dựng trên nền tảng của Nodejs
+    - ExpressJs là khung chứa cho ứng dụng Node.js
+
+4. Nodemone & inspector 🚀
+    - Nodemon là công cụ giúp cho ứng dụng tự động restart mỗi khi có thay đổi trên file
+    - --inspect: là 1 flag giúp debug dễ hơn
+
+5. Morgan 🚀
+    - Giúp log các request bên phía server để xem
+
+6. Template Engine 🚀
+    - Handlebar
+    - app.set('views', path.join(__dirname, 'resources', 'views')) // Đặt lại đường dẫn
+    - D: \Document\ExpressJS\F8_blog\src -> D:\Document\ExpressJS\F8_blog\src\resources
+
+7. Query Parameter 🚀
+    - localhost:3000/search?q=key&rel=aaa&author=bbb
+
+8. Form default Behavior 🚀
+    - Hành vi mặc định của form khi có input có attr là "name" khi bấm nút button thì form sẽ 
+thực hiện hành vi là submit thì nó sẽ đính tất cả các thẻ input có attr là "name" ở trong form
+lên trên thằng Query Parameter với phương thức là Get và sẽ reload lại trang
+
+9. Post Method 🚀
+    - GET lộ thông tin trên URL
+    - Phương thức POST là hình thức client gửi dữ liệu lên server và dữ liệu này sẽ bị ẩn chứ 
+không hiển thị lên URL 
+
+10. MVC 🚀
+    - Cấu trúc folder
+    *src
+        - index.js
+        - app
+            + controllers
+        - public
+            + css
+            + img
+        - resources
+            + sass
+            + views
+                + Layouts
+                    + main.hbs
+                + partials
+                    + header.hbs
+                    + footer.hbs
+                + about.hbs
+                + home.hbs
+                + new.hbs
+        - routes
+
+11. Pretiier 🚀
+    - Pretiier Có tác dụng làm code đệp hơn, theo chuẩn thống nhất
+    - Lint-staged: Có công dụng chạy những file đã được git add, kiểm tra và format lại file đó
+trước di commit
