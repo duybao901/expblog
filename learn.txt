@@ -63,6 +63,7 @@ không hiển thị lên URL
         - routes
 
 11. Pretiier 🚀
-    - Pretiier Có tác dụng làm code đệp hơn, theo chuẩn thống nhất
-    - Lint-staged: Có công dụng chạy những file đã được git add, kiểm tra và format lại file đó
+    - pretiier Có tác dụng làm code đệp hơn, theo chuẩn thống nhất
+    - lint-staged: Có công dụng chạy những file đã được git add, kiểm tra và format lại file đó
 trước di commit
+    - husky Có tác dụng sẽ tự động chạy lint-staged Pretiier trước khi commit code
