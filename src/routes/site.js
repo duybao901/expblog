@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const siteController = require('../app/controllers/siteControllers');
+const siteController = require('../app/controllers/siteController');
 
 //! Lưu ý phải để thằng '/' dưới cùng vì nó sẽ tìm từ trên xuống ko match thì match vs thằng '/'
 router.get('/search', siteController.getSearch); // Search

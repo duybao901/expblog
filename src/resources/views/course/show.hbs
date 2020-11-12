@@ -1,0 +1,21 @@
+<div class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 com-md-3 col-lg-3">                
+                <button type="button" class="btn btn-primary">Watch Now</button>
+            </div>
+            <div class="col-sm-12 com-md-9 col-lg-9">
+                <h2>
+                    {{course.name}}                    
+                </h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{course.videoId}}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <p>
+                    {{course.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
