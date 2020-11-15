@@ -23,6 +23,10 @@ const Course = new Scheme(
             type: String,
             required: true,
         },
+        level: {
+            type: String,
+            required: true,
+        },
         slug: { type: String, slug: 'name', unique: true },
     },
     {

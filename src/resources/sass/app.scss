@@ -7,3 +7,10 @@ body {
 .card-course-item {
     margin: 20px 0 0 0;
 }
+.user-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 3px;
+    border-radius: 50%;
+}
