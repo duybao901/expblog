@@ -1,5 +1,5 @@
-body {
-  background-color: #f1f1f1 !important;
+a:hover {
+  text-decoration: none !important;
 }
 
 .form-search {
@@ -16,6 +16,19 @@ body {
   object-fit: cover;
   margin-right: 3px;
   border-radius: 50%;
+}
+
+.trash-icon {
+  position: relative;
+}
+.trash-icon i {
+  font-size: 25px;
+  color: #007bff;
+}
+.trash-icon span {
+  position: absolute;
+  right: -15px;
+  top: -10px;
 }
 
 /*# sourceMappingURL=app.css.map */

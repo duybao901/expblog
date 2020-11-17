@@ -76,3 +76,9 @@ trước di commit
     -vì form chỉ hỗ trợ method GET và POST nên muôn dùng các hành động khác thì dùng thư viện
 method-override
 
+13. Soft Delete 🚀
+    - Delete (Soft)
+    - Restore
+    - force Delete
+
+

@@ -1,6 +1,11 @@
 <div class="container">
     <h2 style="margin:20px 0">My Courses</h2>
     <span>🥦</span>
+    <a href="/course/create">Create New Course</a>
+    <a href="/me/trash/courses" style="display: block;float:right;color:#000" class="trash-icon">
+        <i class="fas fa-trash-alt " mr="4"></i> 
+        <span class="badge badge-primary trash-noti">{{countDeleted}}</span>
+    </a>
     <table class="table mt-4">
         <thead>
             <tr>
@@ -23,6 +28,14 @@
                         data-target="#delete-modal-course" data-id={{this._id}}>
                         Delete
                     </button>
+                </td>
+            </tr>
+            {{else }}
+            <tr>
+                {{!-- helpers --}}
+                <td colspan="5" class="text-center" mt="4">
+                    No courses have been created yet 🚀.
+                    <a href="/course/create">Create course</a>
                 </td>
             </tr>
             {{/each}}
