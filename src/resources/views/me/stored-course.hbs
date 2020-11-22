@@ -1,4 +1,4 @@
-<form name="form-container" method="POST" action="/course/handle-form-actions">
+<form name="form-container" method="POST" action="/course/handle-form-actions" id="form-container">
     <div class="container">
         <h2 style="margin:20px 0">My Courses</h2>
         <span>🥦</span>
@@ -16,7 +16,7 @@
                 <option style="margin: 0 auto;" value="">--- Actions ---</option>
                 <option value="delete">Delete</option>
             </select>
-            <button class="btn btn-primary btn-sm apply-button-submit disabled">Apply</button>
+            <button class="btn btn-primary btn-sm apply-button-submit" disabled>Apply</button>
         </div>
         <table class="table mt-4">
             <thead>
@@ -100,7 +100,8 @@
         var checkAllButton = $("#check-all");
         var checkItems = $('input[name="courseIds[]"');
         var applyButtonSubmit = $('.apply-button-submit');
-        var formActionContainer = document.forms['form-container'];
+        //var formActionContainer = document.forms['form-container'];
+        var formActionContainer = $('form[name="form-container"]');
 
         $('#delete-modal-course').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)
@@ -130,19 +131,19 @@
         // remove disable button apply when checked
         function removeDisableButtonApply() {
             if ($('input:checked[name="courseIds[]"').length > 0) {
-                applyButtonSubmit.removeClass('disabled');
+                applyButtonSubmit.attr('disabled', false);
             } else {
-                console.log('1')
-                applyButtonSubmit.addClass('disabled');
+                applyButtonSubmit.attr('disabled', true);
             }
         }
 
-        // Lang nghe hanh dong khi submit
-        applyButtonSubmit.on('submit', function (e) {
-            var isSubmittable = !$(this).hasClass('disabled');
-            if (isSubmittable) {
+        /* Lang nghe hanh dong khi submit
+        formActionContainer.on('submit', function (e) {
+            var isSubmittable = !applyButtonSubmit.hasClass('disabled');
+            if (!isSubmittable) {
                 e.preventDefault();
             }
         })
+        */
     })
 </script>

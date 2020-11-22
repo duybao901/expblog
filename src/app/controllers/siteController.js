@@ -6,7 +6,6 @@ class SiteController {
         Course.find({})
             .then((courses) => {
                 courses = mutipleMongooseToObject(courses);
-                console.log(courses);
                 res.render('home', { courses });
             })
             .catch((err) => next(err));
