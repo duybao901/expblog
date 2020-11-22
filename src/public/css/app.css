@@ -31,4 +31,9 @@ a:hover {
   top: -10px;
 }
 
+.check-box-all-option {
+  margin: 0 20px;
+  width: 150px !important;
+}
+
 /*# sourceMappingURL=app.css.map */
