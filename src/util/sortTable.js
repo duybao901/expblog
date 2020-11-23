@@ -1,3 +1,4 @@
+const handlebars = require('handlebars');
 module.exports = function sortTalble(field, sort) {
     const sortType = field === sort.column ? sort.type : 'default';
 
@@ -26,14 +27,24 @@ module.exports = function sortTalble(field, sort) {
     };
 
     let icon, type;
-    if (sort.type === 'asc' || sort.type == 'desc') {
+    if (sort.type === 'asc' || sort.type === 'desc') {
         icon = icons[sortType];
         type = types[sortType];
     } else {
         icon = icons.default;
         type = types.asc;
     }
-    return `<a href="?_sort&column=${field}&type=${type}" style="font-size:20px"> 
+
+    //! Tránh bị hack
+    const href = handlebars.escapeExpression(
+        `?_sort&column=${field}&type=${type}`,
+    );
+    const output = `<a href="${href}" style="font-size:20px"> 
         ${icon}
     </a>`;
+
+    return new handlebars.SafeString(output);
 };
+
+// raw: { { { specialChars } } } -> & < > " ' ` =   Hacker có thể viết được script --> nguy hiểm
+// html - escaped: { { specialChars } } -> & amp; & lt; & gt; & quot; &#x27; &#x60; &#x3D;
