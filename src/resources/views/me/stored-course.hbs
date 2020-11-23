@@ -1,12 +1,17 @@
 <form name="form-container" method="POST" action="/course/handle-form-actions" id="form-container">
     <div class="container">
+        {{!-- Heading --}}
         <h2 style="margin:20px 0">My Courses</h2>
-        <span>🥦</span>
+        <span>🥦</span>        
         <a href="/course/create">Create New Course</a>
+
+        {{!-- Trash --}}
         <a href="/me/trash/courses" style="display: block;float:right;color:#000" class="trash-icon">
             <i class="fas fa-trash-alt " mr="4"></i>
             <span class="badge badge-primary trash-noti">{{countDeleted}}</span>
         </a>
+
+        {{!-- Form actions --}}
         <div class="action d-flex align-items-center" style="margin:50px 0">
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="check-all">
@@ -18,14 +23,24 @@
             </select>
             <button class="btn btn-primary btn-sm apply-button-submit" disabled>Apply</button>
         </div>
+
+        {{!-- Content --}}
         <table class="table mt-4">
             <thead>
                 <tr>
                     <th scope="col"></th>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Level</th>
-                    <th scope="col">Created At</th>
+                    <th scope="col">Name                       
+                        {{{sortable 'name' _sort}}}
+                    </th>
+                    <th scope="col" style="width: 90px;">
+                        <span>Level</span>
+                        {{{sortable 'level' _sort}}}
+                    </th>
+                    </th>
+                    <th scope="col">Created At
+                        {{{sortable 'createAt' _sort}}}
+                    </th>
                 </tr>
             </thead>
             <tbody>

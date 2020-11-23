@@ -81,4 +81,19 @@ method-override
     - Restore
     - force Delete
 
-
+14. Middleware 🚀
+    - Middleware là thành phần đứng giữa mô hình phần mềm
+    - Vai trò : 
+        1. Kiểm soát: Validation
+        2. pass Validation -> Cho qua
+        3. Không cho qua
+        4. Thay đổi / Chỉnh sữa
+        ##
+        1. Tùy ý viết mã trong middleware
+        2. Tạo ra sự thay đổi về dữ liệu (req, res)
+        3. Có thể trả về response cho client
+        4. Gọi next (quy ước) để thực thi middleware tiếp theo
+    - Nhiệm vụ :
+        - Dựng chức năng xác thực (Authentication)
+        - Chức năng phân quyền (Authorization)
+        - Chia sẽ các giá trị của biến tới tất cả các view

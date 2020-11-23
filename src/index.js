@@ -8,15 +8,19 @@ const port = 3000;
 
 const route = require('./routes/index');
 const db = require('./config/mongo/index');
+const sortMiddleware = require('./app/middleware/SortMiddleware');
+const sortTable = require('./util/sortTable');
 db.connect();
 
-//TODO Use
+//TODO Middleware
 // app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname, 'public')));
 // Thay cho body-parser
 app.use(express.urlencoded());
 app.use(express.json());
 app.use(methodOverride('_method'));
+// Sort middleware
+app.use(sortMiddleware);
 
 //TODO Set
 app.engine(
@@ -25,6 +29,7 @@ app.engine(
         extname: '.hbs', // Đổi tên đuôi file
         helpers: {
             sum: (a, b) => a + b,
+            sortable: sortTable,
         },
     }),
 );
